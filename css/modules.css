@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    overflow: scroll;
+}
+
+body::-webkit-scrollbar{
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.pdf-container{
+    width: 100%;
+    height: 100%;
+    padding: 1em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.file-header{
+    width: 100%;
+    height: 15em;
+}
+
+.header-nav{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.header-nav a{
+    text-decoration: none;
+    color: #545050;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: "Rubik", sans-serif;;
+}
+
+.header-nav .nav-side{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.nav-side p{
+    font-family: "Playfair Display SC", serif;
+    font-size: 1.3em;
+}
+
+.nav-side img{
+    width: 2.5em;
+}
+
+.nav-igator{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-igator ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+ul a{
+    text-decoration: none;
+    color: #545050;
+}
+
+ul li{
+    list-style: none;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.nav-igator ul a{
+    position: relative;
+}
+
+.nav-igator ul a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.nav-igator ul a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.3em;
+    border-radius: 0.5em;
+    border: 1px solid #545050;
+    margin-bottom: 1em;
+}
+
+.list a{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+}
+
+.module-list p{
+    color: #545050a9;
+}
+
+.list .list-name{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.list-name-text{
+    width: 70%;
+    height: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.3em;
+    padding: 0 1em;
+}
+
+.list-name-text .list-footer a{
+    text-decoration: none;
+    color: #545050;
+    font-weight: 500;
+}
+
+.list-name img{
+    width: 100%;
+}
+
+.list-name-text h1{
+    width: 100%;
+    color: #545050;
+    font-size: 1.5em;
+    font-weight: 550;
+}
+
+.list-name-text .sub-title{
+    width: fit-content;
+    color: #ffffff;
+    font-size: 0.8em;
+    background: #5450509c;
+    text-align: left;
+    padding: 0.5em 0.8em;
+    border-radius: 1em;
+}
+
+.list-footer{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.list-footer .no-module{
+    width: 50%;
+    font-size: 0.8em;
+    display: flex;
+    flex-wrap: nowrap
+}
+
+.list-footer a{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.list-footer a p{
+    width: fit-content;
+    font-size: 0.8em;
+    position: relative;
+}
+
+
+.list-footer a p::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.list-footer a p:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      position: sticky;
+}
+
+@media (min-width: 1024px) {
+.pdf-container{
+    padding: 1em 8em;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+}
+
+.file-header{
+    width: 100%;
+    height: 15em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.header-nav{
+    width: 30%;
+    height: 5em;
+    position: fixed;
+    background: #ffffff;
+}
+
+.nav-igator{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list{
+    width: 40%;
+    height: 13em;
+    border: 0;
+    margin-bottom: 0;
+    margin-top: 5em;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.567);
+}
+
+iframe {
+      width: 57%;
+      height: 100vh;
+      border: 0;
+      position: sticky;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.567);
+}
+
+}
